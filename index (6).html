@@ -1,0 +1,823 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FitZone Gym</title><meta name="description" content="Premium gym website with AI fitness assistant"><link rel="preconnect" href="https://fonts.googleapis.com"><style>html{scroll-behavior:smooth;background:#000}body{margin:0;overflow-x:hidden;background:#000;color:#fff}</style></head><body>
+
+<section class="fz-hero" id="s-accueil">
+  <div class="fz-bg-base"></div>
+  
+  <!-- Image f background blended -->
+  <div class="fz-image-bg">
+    <img src="https://cdn.shopify.com/s/files/1/0814/3149/4875/files/ChatGPT_Image_1_mai_2026_02_15_11.png?v=1777598129" alt="Coachs FitZone" class="fz-hero-img" />
+    <div class="fz-image-overlay"></div>
+  </div>
+  
+  <canvas class="fz-particles" id="fzParticles"></canvas>
+  <div class="fz-orb fz-orb-1"></div>
+  <div class="fz-orb fz-orb-2"></div>
+
+  <nav class="fz-nav">
+    <div class="fz-nav-inner">
+      <div class="fz-logo">
+        <div class="fz-logo-main"><span class="fz-logo-fit">FIT</span><span class="fz-logo-zone">ZONE</span></div>
+        <div class="fz-logo-sub">DÉPASSE TES LIMITES</div>
+      </div>
+      <ul class="fz-menu">
+        <li><a href="#s-accueil" class="fz-link fz-active">ACCUEIL</a></li>
+        <li><a href="#s-apropos" class="fz-link">À PROPOS</a></li>
+        <li><a href="#s-services" class="fz-link">SERVICES</a></li>
+        <li><a href="#s-coachs" class="fz-link">COACHS</a></li>
+        <li><a href="#s-planning" class="fz-link">PLANNING</a></li>
+        <li><a href="#s-tarifs" class="fz-link">TARIFS</a></li>
+        <li><a href="#s-contact" class="fz-link">CONTACT</a></li>
+      </ul>
+      <div class="fz-nav-right">
+        <div class="fz-phone">
+          <span class="fz-phone-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span>+212 6 12 34 56 78</span>
+        </div>
+        <a href="#s-inscription" class="fz-btn-inscription">
+          INSCRIPTION <span class="fz-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="fz-hero-main">
+    <div class="fz-content">
+      <div class="fz-welcome">BIENVENUE CHEZ FITZONE</div>
+      
+      <h1 class="fz-title">
+        <span class="fz-title-line">DÉPASSE</span>
+        <span class="fz-title-line">TES <span class="fz-title-accent">LIMITES</span></span>
+      </h1>
+      
+      <p class="fz-desc">
+        Un espace moderne, des équipements haut de gamme<br>
+        et un accompagnement personnalisé pour atteindre<br>
+        tes objectifs.
+      </p>
+      
+      <div class="fz-buttons">
+        <a href="#s-inscription" class="fz-btn fz-btn-primary">
+          <span class="fz-btn-bg"></span>
+          <span class="fz-btn-text">COMMENCER MAINTENANT</span>
+          <span class="fz-btn-arrow">→</span>
+        </a>
+        <a href="#s-apropos" class="fz-btn fz-btn-secondary">
+          <span class="fz-btn-text">DÉCOUVRIR LA SALLE</span>
+          <span class="fz-btn-play">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </a>
+      </div>
+      
+      <div class="fz-stats">
+        <div class="fz-stat">
+          <div class="fz-stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11v11h-11z"/><path d="M2 9.5h4.5v5H2zm15.5 0H22v5h-4.5z"/><path d="M4 8v8M20 8v8"/></svg>
+          </div>
+          <div class="fz-stat-row"><span class="fz-stat-num" data-target="1000">0</span><span class="fz-stat-plus">+</span></div>
+          <div class="fz-stat-label">Membres actifs</div>
+        </div>
+        <div class="fz-stat-divider"></div>
+        <div class="fz-stat">
+          <div class="fz-stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="fz-stat-row"><span class="fz-stat-num" data-target="15">0</span><span class="fz-stat-plus">+</span></div>
+          <div class="fz-stat-label">Coach certifiés</div>
+        </div>
+        <div class="fz-stat-divider"></div>
+        <div class="fz-stat">
+          <div class="fz-stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </div>
+          <div class="fz-stat-row"><span class="fz-stat-num" data-target="50">0</span><span class="fz-stat-plus">+</span></div>
+          <div class="fz-stat-label">Cours par semaine</div>
+        </div>
+        <div class="fz-stat-divider"></div>
+        <div class="fz-stat">
+          <div class="fz-stat-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="fz-stat-row"><span class="fz-stat-rating">4.9<span>/5</span></span></div>
+          <div class="fz-stat-label">Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fz-features">
+    <div class="fz-features-inner">
+      <div class="fz-feature">
+        <div class="fz-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="fz-feature-text">
+          <div class="fz-feature-title">COACHING PERSONNALISÉ</div>
+          <div class="fz-feature-sub">Un suivi adapté à tes objectifs</div>
+        </div>
+      </div>
+      <div class="fz-feature">
+        <div class="fz-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+        </div>
+        <div class="fz-feature-text">
+          <div class="fz-feature-title">ÉQUIPEMENTS PREMIUM</div>
+          <div class="fz-feature-sub">Matériel haut de gamme</div>
+        </div>
+      </div>
+      <div class="fz-feature">
+        <div class="fz-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <div class="fz-feature-text">
+          <div class="fz-feature-title">PLANNING FLEXIBLE</div>
+          <div class="fz-feature-sub">Des horaires qui s'adaptent à toi</div>
+        </div>
+      </div>
+      <div class="fz-feature">
+        <div class="fz-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L8 6h8l-4-4zm0 4v16M4 10s1 4 8 4 8-4 8-4"/></svg>
+        </div>
+        <div class="fz-feature-text">
+          <div class="fz-feature-title">CONSEILS NUTRITION</div>
+          <div class="fz-feature-sub">Un corps sain commence ici</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* RESET */
+.fz-hero,.fz-hero *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+.fz-hero ::selection{background:transparent;color:inherit}
+.fz-hero ::-moz-selection{background:transparent;color:inherit}
+.fz-hero h1,.fz-hero p,.fz-hero span,.fz-hero a,.fz-hero div,.fz-hero li{user-select:none;-webkit-user-select:none;-moz-user-select:none}
+
+/* FULL WIDTH */
+.fz-hero{position:relative;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;min-height:100vh;background:#0a0a0a;color:#fff;overflow:hidden;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;display:flex;flex-direction:column}
+
+.fz-bg-base{position:absolute;inset:0;background:#0a0a0a;z-index:1}
+
+/* IMAGE F BACKGROUND - takhd 50% lyamine, blended */
+.fz-image-bg{position:absolute;top:0;right:0;width:55%;height:100%;z-index:2;overflow:hidden}
+.fz-hero-img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;animation:fzImageIn 1.5s cubic-bezier(.34,1.56,.64,1) forwards;opacity:0}
+@keyframes fzImageIn{to{opacity:1}}
+
+/* OVERLAY: gradient kayblend image m3a black background */
+.fz-image-overlay{position:absolute;inset:0;background:linear-gradient(to right,#0a0a0a 0%,rgba(10,10,10,.95) 15%,rgba(10,10,10,.6) 35%,rgba(10,10,10,.2) 60%,rgba(10,10,10,0) 100%);z-index:1;pointer-events:none}
+
+/* PARTICLES & ORBS */
+.fz-particles{position:absolute;inset:0;z-index:3;pointer-events:none;width:100%;height:100%}
+.fz-orb{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:3}
+.fz-orb-1{width:500px;height:500px;background:rgba(190,242,100,.06);top:-150px;left:0;animation:fzOrbFloat 14s ease-in-out infinite}
+.fz-orb-2{width:600px;height:600px;background:rgba(132,204,22,.04);bottom:-250px;left:20%;animation:fzOrbFloat 18s ease-in-out infinite reverse}
+@keyframes fzOrbFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,30px)}}
+
+/* NAVBAR */
+.fz-nav{position:relative;z-index:20;width:100%;flex-shrink:0}
+.fz-nav-inner{display:flex;align-items:center;justify-content:space-between;padding:26px 50px;gap:24px;max-width:1700px;margin:0 auto}
+.fz-logo{flex-shrink:0;line-height:1}
+.fz-logo-main{display:flex;align-items:baseline}
+.fz-logo-fit,.fz-logo-zone{font-size:28px;font-weight:900;letter-spacing:-1px}
+.fz-logo-fit{color:#fff}
+.fz-logo-zone{color:#bef264}
+.fz-logo-sub{font-size:9px;font-weight:700;letter-spacing:2px;color:#888;margin-top:5px}
+.fz-menu{display:flex;gap:28px;list-style:none}
+.fz-menu li{list-style:none}
+.fz-link{color:#fff;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:1.5px;position:relative;padding:8px 0;transition:color .3s;white-space:nowrap}
+.fz-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:#bef264;transition:width .3s cubic-bezier(.34,1.56,.64,1)}
+.fz-link:hover,.fz-link.fz-active{color:#bef264}
+.fz-link:hover::after,.fz-link.fz-active::after{width:100%}
+.fz-nav-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.fz-phone{display:flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:13px;white-space:nowrap}
+.fz-phone-icon{color:#bef264;display:flex;align-items:center}
+.fz-btn-inscription{background:#bef264;color:#0a0a0a;padding:13px 22px;border-radius:8px;font-weight:800;font-size:12px;letter-spacing:1px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s cubic-bezier(.34,1.56,.64,1);box-shadow:0 4px 0 #84cc16,0 6px 20px rgba(190,242,100,.3);white-space:nowrap;flex-shrink:0}
+.fz-btn-inscription:hover{transform:translateY(-3px);box-shadow:0 7px 0 #84cc16,0 12px 35px rgba(190,242,100,.5);color:#0a0a0a}
+.fz-arrow{transition:transform .3s;display:inline-block}
+.fz-btn-inscription:hover .fz-arrow{transform:translateX(4px)}
+
+/* HERO MAIN: text 3l layesar, image f background */
+.fz-hero-main{position:relative;z-index:5;flex:1;display:flex;align-items:center;width:100%;max-width:1700px;margin:0 auto;padding:30px 50px;min-height:0}
+
+.fz-content{position:relative;z-index:5;width:55%;max-width:680px;display:flex;flex-direction:column;justify-content:center}
+
+.fz-welcome{color:#bef264;font-size:13px;font-weight:800;letter-spacing:3px;margin-bottom:24px;opacity:0;animation:fzSlideIn .8s cubic-bezier(.34,1.56,.64,1) .2s forwards}
+
+.fz-title{font-size:clamp(54px,5.8vw,98px);font-weight:900;line-height:.95;letter-spacing:-2px;margin:0 0 32px;font-style:italic;color:#fff}
+.fz-title-line{display:block;opacity:0;transform:translateY(40px);animation:fzSlideUp .9s cubic-bezier(.34,1.56,.64,1) forwards;color:#fff}
+.fz-title-line:nth-child(1){animation-delay:.3s}
+.fz-title-line:nth-child(2){animation-delay:.5s}
+.fz-title-accent{color:#bef264;display:inline-block;text-shadow:0 0 60px rgba(190,242,100,.5)}
+
+.fz-desc{font-size:16px;line-height:1.7;color:#c8c8c8;margin:0 0 36px;opacity:0;animation:fzSlideIn .8s cubic-bezier(.34,1.56,.64,1) .7s forwards;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+
+/* BUTTONS */
+.fz-buttons{display:flex;gap:14px;margin-bottom:44px;opacity:0;animation:fzSlideIn .8s cubic-bezier(.34,1.56,.64,1) .9s forwards;flex-wrap:wrap}
+.fz-btn{position:relative;display:inline-flex;align-items:center;gap:12px;padding:17px 30px;font-size:13px;font-weight:800;letter-spacing:1.5px;text-decoration:none;border-radius:8px;overflow:hidden;transition:all .4s cubic-bezier(.34,1.56,.64,1);cursor:pointer;border:none;white-space:nowrap}
+.fz-btn-primary{background:#bef264;color:#0a0a0a;box-shadow:0 4px 0 #84cc16,0 8px 30px rgba(190,242,100,.3)}
+.fz-btn-primary:hover{transform:translateY(-4px);box-shadow:0 8px 0 #84cc16,0 16px 50px rgba(190,242,100,.6);color:#0a0a0a}
+.fz-btn-primary:active{transform:translateY(0);box-shadow:0 2px 0 #84cc16}
+.fz-btn-bg{position:absolute;inset:0;background:linear-gradient(45deg,transparent 30%,rgba(255,255,255,.4) 50%,transparent 70%);transform:translateX(-100%);transition:transform .6s;pointer-events:none}
+.fz-btn-primary:hover .fz-btn-bg{transform:translateX(100%)}
+.fz-btn-secondary{background:rgba(20,20,20,.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;border:2px solid rgba(255,255,255,.2);box-shadow:0 4px 0 rgba(255,255,255,.05)}
+.fz-btn-secondary:hover{border-color:#bef264;color:#bef264;transform:translateY(-4px);box-shadow:0 8px 0 rgba(190,242,100,.2),0 16px 30px rgba(190,242,100,.2)}
+.fz-btn-text{position:relative;z-index:2}
+.fz-btn-arrow{position:relative;z-index:2;transition:transform .3s cubic-bezier(.34,1.56,.64,1);display:inline-block;font-size:14px}
+.fz-btn-play{position:relative;z-index:2;transition:transform .3s cubic-bezier(.34,1.56,.64,1);display:inline-flex;align-items:center}
+.fz-btn:hover .fz-btn-arrow{transform:translateX(6px)}
+.fz-btn:hover .fz-btn-play{transform:scale(1.2)}
+
+/* STATS - SVG icons machi emoji */
+.fz-stats{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:center;padding:22px 28px;background:rgba(20,20,20,.7);border:1px solid rgba(255,255,255,.08);border-radius:14px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);max-width:620px;opacity:0;animation:fzSlideIn .8s cubic-bezier(.34,1.56,.64,1) 1.1s forwards;transition:all .4s}
+.fz-stats:hover{border-color:rgba(190,242,100,.2);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.fz-stat{display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .4s cubic-bezier(.34,1.56,.64,1);cursor:pointer}
+.fz-stat:hover{transform:translateY(-5px) scale(1.05)}
+.fz-stat-icon{width:24px;height:24px;color:#bef264;margin-bottom:8px;filter:drop-shadow(0 0 8px rgba(190,242,100,.5))}
+.fz-stat-icon svg{width:100%;height:100%}
+.fz-stat-row{display:flex;align-items:baseline;gap:1px}
+.fz-stat-num,.fz-stat-rating{font-size:26px;font-weight:900;color:#fff;line-height:1}
+.fz-stat-rating span{font-size:14px;color:#888;margin-left:2px}
+.fz-stat-plus{color:#bef264;font-size:22px;font-weight:900;line-height:1}
+.fz-stat-label{font-size:10px;color:#888;margin-top:5px;letter-spacing:.5px;white-space:nowrap}
+.fz-stat-divider{width:1px;height:36px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.15),transparent)}
+
+/* FEATURES - SVG icons */
+.fz-features{position:relative;z-index:10;width:100%;background:rgba(15,15,15,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,.06);flex-shrink:0}
+.fz-features-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:26px 50px;max-width:1700px;margin:0 auto}
+.fz-feature{display:flex;align-items:center;gap:14px;padding:12px;border-radius:12px;transition:all .4s cubic-bezier(.34,1.56,.64,1);cursor:pointer}
+.fz-feature:hover{background:rgba(190,242,100,.05);transform:translateY(-3px)}
+.fz-feature-icon{width:32px;height:32px;color:#bef264;filter:drop-shadow(0 0 8px rgba(190,242,100,.4));transition:transform .4s cubic-bezier(.34,1.56,.64,1);flex-shrink:0}
+.fz-feature-icon svg{width:100%;height:100%}
+.fz-feature:hover .fz-feature-icon{transform:scale(1.15) rotate(5deg)}
+.fz-feature-title{font-size:12px;font-weight:800;letter-spacing:1px;color:#fff;margin-bottom:4px}
+.fz-feature-sub{font-size:11px;color:#999}
+
+@keyframes fzSlideIn{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fzSlideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+/* RESPONSIVE */
+@media (max-width:1300px){
+  .fz-menu{gap:20px}
+  .fz-link{font-size:11px}
+  .fz-nav-inner{padding:22px 35px;gap:18px}
+  .fz-hero-main{padding:25px 35px}
+  .fz-features-inner{padding:22px 35px}
+}
+@media (max-width:1100px){
+  .fz-hero{min-height:auto}
+  .fz-menu{display:none}
+  .fz-nav-inner{padding:18px 24px}
+  .fz-image-bg{width:100%;height:50%;top:auto;bottom:0;opacity:.4}
+  .fz-image-overlay{background:linear-gradient(to bottom,#0a0a0a 0%,rgba(10,10,10,.7) 50%,rgba(10,10,10,.3) 100%)}
+  .fz-content{width:100%;max-width:100%}
+  .fz-hero-main{padding:30px 24px}
+  .fz-features-inner{grid-template-columns:repeat(2,1fr);padding:20px 24px}
+}
+@media (max-width:700px){
+  .fz-nav-right .fz-phone{display:none}
+  .fz-title{font-size:50px;letter-spacing:-1px}
+  .fz-buttons{flex-direction:column;width:100%}
+  .fz-btn{justify-content:center;width:100%}
+  .fz-stats{grid-template-columns:1fr 1fr;gap:14px;padding:18px}
+  .fz-stat-divider{display:none}
+  .fz-features-inner{grid-template-columns:1fr;gap:8px}
+  .fz-logo-fit,.fz-logo-zone{font-size:22px}
+  .fz-btn-inscription{padding:11px 16px;font-size:11px}
+}
+</style>
+
+<script>
+(function(){
+  const canvas=document.getElementById('fzParticles');
+  if(canvas){
+    const ctx=canvas.getContext('2d');
+    let particles=[];
+    function resize(){canvas.width=canvas.offsetWidth;canvas.height=canvas.offsetHeight}
+    resize();window.addEventListener('resize',resize);
+    class P{
+      constructor(){this.reset();this.y=Math.random()*canvas.height}
+      reset(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.size=Math.random()*1.8+.5;this.speedY=(Math.random()-.5)*.3;this.speedX=(Math.random()-.5)*.3;this.opacity=Math.random()*.5+.3}
+      update(){this.y+=this.speedY;this.x+=this.speedX;if(this.y<0||this.y>canvas.height)this.speedY*=-1;if(this.x<0||this.x>canvas.width)this.speedX*=-1}
+      draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fillStyle='rgba(190,242,100,'+this.opacity+')';ctx.fill()}
+    }
+    for(let i=0;i<60;i++)particles.push(new P());
+    function connect(){
+      for(let i=0;i<particles.length;i++){
+        for(let j=i+1;j<particles.length;j++){
+          const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);
+          if(d<140){
+            ctx.beginPath();
+            ctx.strokeStyle='rgba(190,242,100,'+(.18*(1-d/140))+')';
+            ctx.lineWidth=.6;
+            ctx.moveTo(particles[i].x,particles[i].y);
+            ctx.lineTo(particles[j].x,particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+    function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{p.update();p.draw()});connect();requestAnimationFrame(animate)}
+    animate();
+  }
+  const counters=document.querySelectorAll('[data-target]');
+  const obs=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){const el=entry.target,target=parseInt(el.dataset.target),dur=2000,start=performance.now();function update(now){const p=Math.min((now-start)/dur,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*target);if(p<1)requestAnimationFrame(update)}requestAnimationFrame(update);obs.unobserve(el)}})},{threshold:.3});
+  counters.forEach(c=>obs.observe(c));
+  document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('click',(e)=>{const t=document.querySelector(link.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+})();
+</script>
+<style>
+.gym-announcement{width:100vw;margin-left:calc(50% - 50vw);background:#a6ff00;color:#000;overflow:hidden;font-family:Arial,sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:1.5px;padding:12px 0}.gym-announcement-track{display:flex;width:max-content;animation:gymMarquee 24s linear infinite}.gym-announcement span{padding:0 35px;white-space:nowrap}@keyframes gymMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+</style>
+<div class="gym-announcement"><div class="gym-announcement-track"><span>🔥 Train hard. Stay strong. Become unstoppable.</span><span>💪 New memberships available now.</span><span>⚡ Push your limits with expert coaching.</span><span>🏋️ Your transformation starts today.</span><span>🔥 Train hard. Stay strong. Become unstoppable.</span><span>💪 New memberships available now.</span><span>⚡ Push your limits with expert coaching.</span><span>🏋️ Your transformation starts today.</span></div></div>
+
+<style>
+.fit-services-3d{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);background:radial-gradient(circle at top,#111827 0%,#050505 45%,#000 100%);color:#fff;padding:120px 5%;font-family:Arial,sans-serif;overflow:hidden}.fit-services-head{text-align:center;max-width:900px;margin:0 auto 80px;opacity:0;transform:translateY(80px) scale(.9);animation:fadeHead 1s ease forwards}.fit-kicker{color:#a6ff00;letter-spacing:6px;font-size:14px;font-weight:900;margin-bottom:20px}.fit-title{font-size:clamp(48px,6vw,90px);line-height:.95;margin:0;font-weight:900;text-transform:uppercase}.fit-title span{color:#a6ff00;text-shadow:0 0 30px rgba(166,255,0,.4)}.fit-sub{margin-top:25px;color:rgba(255,255,255,.65);font-size:18px}.fit-grid{max-width:1350px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:25px}.fit-card{position:relative;height:380px;overflow:hidden;border:1px solid rgba(166,255,0,.2);background:#080808;transform-style:preserve-3d;box-shadow:0 20px 60px rgba(0,0,0,.6);opacity:0;transform:translateY(100px) scale(.9);animation:fadeCard .8s ease forwards}.fit-card:nth-child(1){animation-delay:.2s}.fit-card:nth-child(2){animation-delay:.4s}.fit-card:nth-child(3){animation-delay:.6s}.fit-card:nth-child(4){animation-delay:.8s}.fit-card:hover{transform:translateY(-15px) scale(1.05);border-color:#a6ff00;box-shadow:0 40px 80px rgba(0,0,0,.8),0 0 40px rgba(166,255,0,.2)}.fit-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;transition:.5s}.fit-card:hover img{transform:scale(1.1);opacity:.8}.fit-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95),rgba(0,0,0,.4))}.fit-content{position:absolute;bottom:0;padding:30px;z-index:2}.fit-number{color:#a6ff00;font-size:13px;letter-spacing:3px;margin-bottom:15px}.fit-content h3{font-size:22px;text-transform:uppercase;margin:0 0 10px}.fit-line{width:50px;height:3px;background:#a6ff00;margin:15px 0}.fit-content p{font-size:14px;color:rgba(255,255,255,.75)}@keyframes fadeHead{to{opacity:1;transform:translateY(0) scale(1)}}@keyframes fadeCard{to{opacity:1;transform:translateY(0) scale(1)}}@media(max-width:1000px){.fit-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.fit-grid{grid-template-columns:1fr}}
+</style>
+<section class="fit-services-3d" id="s-services"><div class="fit-services-head"><div class="fit-kicker">OUR SERVICES</div><h2 class="fit-title">Everything you need<br>to <span>succeed</span></h2><p class="fit-sub">Premium services designed to help you achieve real results faster.</p></div><div class="fit-grid"><div class="fit-card"><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=900"><div class="fit-content"><div class="fit-number">01</div><h3>Personal Coaching</h3><div class="fit-line"></div><p>Custom training programs with expert guidance.</p></div></div><div class="fit-card"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=900"><div class="fit-content"><div class="fit-number">02</div><h3>Premium Equipment</h3><div class="fit-line"></div><p>High-end machines for maximum performance.</p></div></div><div class="fit-card"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=900"><div class="fit-content"><div class="fit-number">03</div><h3>Flexible Schedule</h3><div class="fit-line"></div><p>Train anytime with flexible workout hours.</p></div></div><div class="fit-card"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=900"><div class="fit-content"><div class="fit-number">04</div><h3>Nutrition Plan</h3><div class="fit-line"></div><p>Smart nutrition strategies for better results.</p></div></div></div></section>
+<style>
+.fit-pricing-pro{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  position:relative;
+  overflow:hidden;
+  background:#020202;
+  color:#fff;
+  padding:120px 5%;
+  font-family:Arial,sans-serif;
+}
+
+.fit-pricing-pro::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(166,255,0,.18),transparent 32%),
+    radial-gradient(circle at 80% 70%,rgba(166,255,0,.10),transparent 36%),
+    linear-gradient(180deg,#000,#050505,#000);
+  animation:bgPulse 8s ease-in-out infinite alternate;
+}
+
+.fit-pricing-pro::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(166,255,0,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(166,255,0,.07) 1px,transparent 1px);
+  background-size:70px 70px;
+  transform:perspective(600px) rotateX(55deg);
+  transform-origin:bottom;
+  opacity:.35;
+  animation:gridMove 3s linear infinite;
+}
+
+@keyframes bgPulse{from{transform:scale(1)}to{transform:scale(1.08)}}
+@keyframes gridMove{from{background-position:0 0}to{background-position:0 70px}}
+
+.fit-pricing-inner{
+  position:relative;
+  z-index:2;
+  max-width:1300px;
+  margin:auto;
+}
+
+.fit-pricing-head{
+  text-align:center;
+  max-width:900px;
+  margin:0 auto 75px;
+  animation:pricingReveal .9s ease both;
+  animation-timeline:view();
+  animation-range:entry 0% cover 35%;
+}
+
+.fit-pricing-kicker{
+  color:#a6ff00;
+  font-size:14px;
+  letter-spacing:6px;
+  font-weight:900;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.fit-pricing-title{
+  font-size:clamp(46px,6vw,88px);
+  line-height:.95;
+  font-weight:900;
+  text-transform:uppercase;
+  margin:0;
+}
+
+.fit-pricing-title span{
+  color:#a6ff00;
+  text-shadow:0 0 35px rgba(166,255,0,.55);
+}
+
+.fit-pricing-sub{
+  margin-top:24px;
+  font-size:18px;
+  color:rgba(255,255,255,.68);
+  line-height:1.7;
+}
+
+.fit-price-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  perspective:1400px;
+}
+
+.fit-price-card{
+  position:relative;
+  min-height:560px;
+  padding:42px 34px;
+  background:rgba(5,5,5,.78);
+  border:1px solid rgba(166,255,0,.22);
+  backdrop-filter:blur(14px);
+  overflow:hidden;
+  transform-style:preserve-3d;
+  transition:.45s ease;
+  box-shadow:0 30px 80px rgba(0,0,0,.65);
+
+  animation:priceCardReveal .9s ease both;
+  animation-timeline:view();
+  animation-range:entry 0% cover 35%;
+}
+
+.fit-price-card:nth-child(1){animation-delay:.1s}
+.fit-price-card:nth-child(2){animation-delay:.2s}
+.fit-price-card:nth-child(3){animation-delay:.3s}
+
+.fit-price-card:nth-child(2){
+  border-color:#a6ff00;
+  box-shadow:0 35px 95px rgba(0,0,0,.85),0 0 45px rgba(166,255,0,.18);
+  transform:translateY(-22px);
+}
+
+.fit-price-card:nth-child(2)::before{
+  content:"MOST POPULAR";
+  position:absolute;
+  top:24px;
+  right:-48px;
+  background:#a6ff00;
+  color:#030303;
+  padding:10px 58px;
+  font-size:11px;
+  font-weight:900;
+  transform:rotate(35deg);
+}
+
+.fit-price-card:hover{
+  transform:translateY(-18px) rotateX(8deg) rotateY(-5deg) scale(1.03);
+  border-color:#a6ff00;
+  box-shadow:0 45px 100px rgba(0,0,0,.88),0 0 55px rgba(166,255,0,.25);
+}
+
+.fit-plan{color:#a6ff00;letter-spacing:4px;font-size:14px;font-weight:900;text-transform:uppercase}
+.fit-price{margin:26px 0 10px;font-size:70px;line-height:1;font-weight:900}
+.fit-price small{font-size:18px;color:rgba(255,255,255,.55)}
+.fit-desc{color:rgba(255,255,255,.66);font-size:15px;line-height:1.7;min-height:55px}
+.fit-line{height:1px;background:linear-gradient(90deg,#a6ff00,transparent);margin:28px 0}
+.fit-list{display:grid;gap:16px;margin-bottom:45px}
+.fit-list div{font-size:15px;color:rgba(255,255,255,.82)}
+.fit-list span{color:#a6ff00;font-weight:900;margin-right:8px}
+
+.fit-btn{
+  position:absolute;
+  left:34px;
+  right:34px;
+  bottom:34px;
+  text-align:center;
+  padding:17px 20px;
+  background:#a6ff00;
+  color:#030303;
+  text-decoration:none;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  transition:.35s ease;
+}
+
+.fit-btn:hover{
+  transform:translateY(-7px);
+  box-shadow:0 20px 45px rgba(166,255,0,.38);
+}
+
+@keyframes pricingReveal{
+  from{opacity:0;transform:translateY(70px) rotateX(-18deg) scale(.92)}
+  to{opacity:1;transform:translateY(0) rotateX(0) scale(1)}
+}
+
+@keyframes priceCardReveal{
+  from{opacity:0;transform:translateY(90px) rotateX(-24deg) scale(.9)}
+  to{opacity:1;transform:translateY(0) rotateX(0) scale(1)}
+}
+
+@media(max-width:950px){
+  .fit-price-grid{grid-template-columns:1fr}
+  .fit-price-card:nth-child(2){transform:none}
+}
+</style>
+
+<section class="fit-pricing-pro" id="s-tarifs">
+  <div class="fit-pricing-inner">
+    <div class="fit-pricing-head">
+      <div class="fit-pricing-kicker">MEMBERSHIP PRICING</div>
+      <h2 class="fit-pricing-title">Pick your<br><span>perfect plan</span></h2>
+      <p class="fit-pricing-sub">Choose the membership that matches your goals, your rhythm, and your level of commitment.</p>
+    </div>
+
+    <div class="fit-price-grid">
+      <div class="fit-price-card">
+        <div class="fit-plan">Starter</div>
+        <div class="fit-price">$29<small>/month</small></div>
+        <p class="fit-desc">For beginners who want simple access and a strong start.</p>
+        <div class="fit-line"></div>
+        <div class="fit-list">
+          <div><span>✓</span>Gym access</div>
+          <div><span>✓</span>Basic workout plan</div>
+          <div><span>✓</span>Locker room access</div>
+          <div><span>✓</span>1 group class weekly</div>
+        </div>
+        <a href="#" class="fit-btn">Start now</a>
+      </div>
+
+      <div class="fit-price-card">
+        <div class="fit-plan">Pro Athlete</div>
+        <div class="fit-price">$59<small>/month</small></div>
+        <p class="fit-desc">Best for serious members who want coaching and faster results.</p>
+        <div class="fit-line"></div>
+        <div class="fit-list">
+          <div><span>✓</span>Unlimited gym access</div>
+          <div><span>✓</span>Personal coaching</div>
+          <div><span>✓</span>Nutrition guidance</div>
+          <div><span>✓</span>Unlimited group classes</div>
+        </div>
+        <a href="#" class="fit-btn">Choose plan</a>
+      </div>
+
+      <div class="fit-price-card">
+        <div class="fit-plan">Elite</div>
+        <div class="fit-price">$99<small>/month</small></div>
+        <p class="fit-desc">A premium transformation package with full support.</p>
+        <div class="fit-line"></div>
+        <div class="fit-list">
+          <div><span>✓</span>VIP gym access</div>
+          <div><span>✓</span>Weekly coach review</div>
+          <div><span>✓</span>Advanced nutrition plan</div>
+          <div><span>✓</span>Priority booking</div>
+        </div>
+        <a href="#" class="fit-btn">Go elite</a>
+      </div>
+    </div>
+  </div>
+</section><style>
+.fit-coaches-pro{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  position:relative;
+  overflow:hidden;
+  background:#000;
+  color:#fff;
+  padding:120px 5%;
+  font-family:Arial,sans-serif;
+}
+
+.fit-coaches-pro::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 25%,rgba(166,255,0,.22),transparent 34%),
+    radial-gradient(circle at 80% 70%,rgba(166,255,0,.14),transparent 38%),
+    linear-gradient(180deg,#000,#060606,#000);
+  animation:coachBg 8s ease-in-out infinite alternate;
+}
+
+.fit-coaches-pro::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(166,255,0,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(166,255,0,.05) 1px,transparent 1px);
+  background-size:85px 85px;
+  opacity:.24;
+  transform:perspective(750px) rotateX(58deg);
+  transform-origin:bottom;
+  animation:coachGrid 4s linear infinite;
+}
+
+@keyframes coachBg{
+  from{transform:scale(1)}
+  to{transform:scale(1.09) translateY(-18px)}
+}
+
+@keyframes coachGrid{
+  from{background-position:0 0}
+  to{background-position:0 85px}
+}
+
+.fit-coaches-inner{
+  position:relative;
+  z-index:2;
+  max-width:1300px;
+  margin:auto;
+}
+
+.fit-coaches-head{
+  text-align:center;
+  max-width:900px;
+  margin:0 auto 75px;
+}
+
+.fit-coaches-kicker{
+  color:#a6ff00;
+  letter-spacing:6px;
+  font-size:14px;
+  font-weight:900;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.fit-coaches-title{
+  font-size:clamp(48px,6vw,88px);
+  line-height:.95;
+  margin:0;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.fit-coaches-title span{
+  color:#a6ff00;
+  text-shadow:0 0 38px rgba(166,255,0,.8);
+}
+
+.fit-coaches-sub{
+  margin-top:24px;
+  color:rgba(255,255,255,.72);
+  font-size:18px;
+  line-height:1.7;
+}
+
+.fit-coaches-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  perspective:1300px;
+}
+
+.fit-coach-card{
+  position:relative;
+  min-height:520px;
+  overflow:hidden;
+  border:2px solid rgba(166,255,0,.32);
+  background:#050505;
+  transform-style:preserve-3d;
+  transition:.45s ease;
+  box-shadow:0 30px 80px rgba(0,0,0,.85);
+}
+
+.fit-coach-card:hover{
+  transform:translateY(-18px) rotateX(8deg) rotateY(-5deg) scale(1.03);
+  border-color:#a6ff00;
+  box-shadow:0 45px 100px rgba(0,0,0,.9),0 0 55px rgba(166,255,0,.28);
+}
+
+.fit-coach-card img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:.62;
+  transition:.6s ease;
+}
+
+.fit-coach-card:hover img{
+  transform:scale(1.12);
+  opacity:.82;
+}
+
+.fit-coach-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.98),rgba(0,0,0,.45),rgba(0,0,0,.05));
+}
+
+.fit-coach-info{
+  position:absolute;
+  left:28px;
+  right:28px;
+  bottom:28px;
+  z-index:2;
+}
+
+.fit-coach-tag{
+  color:#a6ff00;
+  font-size:12px;
+  letter-spacing:3px;
+  font-weight:900;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.fit-coach-info h3{
+  font-size:32px;
+  margin:0 0 10px;
+  text-transform:uppercase;
+}
+
+.fit-coach-info p{
+  color:rgba(255,255,255,.82);
+  line-height:1.6;
+  margin:0;
+}
+
+.fit-coach-line{
+  width:60px;
+  height:3px;
+  background:#a6ff00;
+  margin:18px 0;
+  box-shadow:0 0 20px rgba(166,255,0,.8);
+}
+
+@media(max-width:950px){
+  .fit-coaches-grid{grid-template-columns:1fr}
+}
+</style>
+
+<section class="fit-coaches-pro" id="s-coachs">
+  <div class="fit-coaches-inner">
+
+    <div class="fit-coaches-head">
+      <div class="fit-coaches-kicker">EXPERT TRAINERS</div>
+      <h2 class="fit-coaches-title">
+        Meet your<br>
+        <span>coaches</span>
+      </h2>
+      <p class="fit-coaches-sub">
+        Professional trainers ready to guide your transformation with discipline, strategy, and real support.
+      </p>
+    </div>
+
+    <div class="fit-coaches-grid">
+
+      <div class="fit-coach-card">
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=900">
+        <div class="fit-coach-info">
+          <div class="fit-coach-tag">Strength Coach</div>
+          <h3>Mark Stone</h3>
+          <div class="fit-coach-line"></div>
+          <p>Focused on power, muscle growth, and performance training.</p>
+        </div>
+      </div>
+
+      <div class="fit-coach-card">
+        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=900">
+        <div class="fit-coach-info">
+          <div class="fit-coach-tag">Fitness Coach</div>
+          <h3>Sarah Lee</h3>
+          <div class="fit-coach-line"></div>
+          <p>Specialized in body transformation and smart conditioning.</p>
+        </div>
+      </div>
+
+      <div class="fit-coach-card">
+        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=900">
+        <div class="fit-coach-info">
+          <div class="fit-coach-tag">Performance Coach</div>
+          <h3>Alex King</h3>
+          <div class="fit-coach-line"></div>
+          <p>High-intensity coaching built for athletes and serious members.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+.fit-reviews-pro{width:100vw;margin-left:calc(50% - 50vw);background:#000;overflow:hidden;color:#fff;padding:120px 0;font-family:Arial,sans-serif;position:relative}.fit-reviews-pro::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(166,255,0,.2),transparent 35%),radial-gradient(circle at 80% 70%,rgba(166,255,0,.15),transparent 40%);animation:bgMove 8s ease-in-out infinite alternate}@keyframes bgMove{from{transform:scale(1)}to{transform:scale(1.08)}}.fit-reviews-head{text-align:center;margin-bottom:60px}.fit-reviews-title{font-size:clamp(50px,6vw,90px);font-weight:900}.fit-reviews-title span{color:#a6ff00;text-shadow:0 0 40px rgba(166,255,0,1)}.fit-reviews-slider{display:flex;width:max-content;animation:scrollReviews 35s linear infinite}@keyframes scrollReviews{from{transform:translateX(0)}to{transform:translateX(-50%)}}.fit-review{width:320px;margin:0 20px;padding:30px;background:#050505;border:2px solid rgba(166,255,0,.3);transition:.4s}.fit-review:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 0 40px rgba(166,255,0,.3)}.fit-stars{color:#a6ff00;margin-bottom:15px;font-size:18px}.fit-review p{font-size:15px;line-height:1.6;color:#ddd}.fit-user{margin-top:20px;font-weight:900}
+</style>
+<section class="fit-reviews-pro"><div class="fit-reviews-head"><h2 class="fit-reviews-title">What our <span>members say</span></h2></div><div class="fit-reviews-slider">
+<div class="fit-review"><div class="fit-stars">★★★★★</div><p>Best gym ever. I transformed my body in 3 months.</p><div class="fit-user">James</div></div><div class="fit-review"><div class="fit-stars">★★★★★</div><p>Amazing coaches and great atmosphere.</p><div class="fit-user">Sarah</div></div><div class="fit-review"><div class="fit-stars">★★★★★</div><p>I feel stronger and more confident than ever.</p><div class="fit-user">Michael</div></div><div class="fit-review"><div class="fit-stars">★★★★★</div><p>High level equipment and serious training.</p><div class="fit-user">David</div></div><div class="fit-review"><div class="fit-stars">★★★★★</div><p>Perfect place to push your limits.</p><div class="fit-user">Emily</div></div><div class="fit-review"><div class="fit-stars">★★★★★</div><p>The best decision I made this year.</p><div class="fit-user">Lucas</div></div><div class="fit-review"><div class="fit-stars">★★★★★</div><p>Best gym ever. I transformed my body in 3 months.</p><div class="fit-user">James</div></div><div class="fit-review"><div class="fit-stars">★★★★★</div><p>Amazing coaches and great atmosphere.</p><div class="fit-user">Sarah</div></div><div class="fit-review"><div class="fit-stars">★★★★★</div><p>I feel stronger and more confident than ever.</p><div class="fit-user">Michael</div></div><div class="fit-review"><div class="fit-stars">★★★★★</div><p>High level equipment and serious training.</p><div class="fit-user">David</div></div><div class="fit-review"><div class="fit-stars">★★★★★</div><p>Perfect place to push your limits.</p><div class="fit-user">Emily</div></div><div class="fit-review"><div class="fit-stars">★★★★★</div><p>The best decision I made this year.</p><div class="fit-user">Lucas</div></div></div></section>
+<style>
+.fit-qa-pro{width:100vw;margin-left:calc(50% - 50vw);position:relative;overflow:hidden;background:#000;color:#fff;padding:120px 5%;font-family:Arial,sans-serif}.fit-qa-pro::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 25%,rgba(166,255,0,.24),transparent 34%),radial-gradient(circle at 85% 75%,rgba(166,255,0,.14),transparent 38%),linear-gradient(180deg,#000,#050505,#000);animation:qaBg 8s ease-in-out infinite alternate}.fit-qa-pro::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(166,255,0,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(166,255,0,.05) 1px,transparent 1px);background-size:80px 80px;opacity:.22;transform:perspective(750px) rotateX(58deg);transform-origin:bottom;animation:qaGrid 4s linear infinite}@keyframes qaBg{from{transform:scale(1)}to{transform:scale(1.08) translateY(-18px)}}@keyframes qaGrid{from{background-position:0 0}to{background-position:0 80px}}.fit-qa-inner{position:relative;z-index:2;max-width:1100px;margin:auto}.fit-qa-head{text-align:center;margin-bottom:65px}.fit-qa-kicker{color:#a6ff00;letter-spacing:6px;font-size:14px;font-weight:900;text-transform:uppercase;margin-bottom:18px}.fit-qa-title{font-size:clamp(48px,6vw,88px);line-height:.95;text-transform:uppercase;font-weight:900;margin:0}.fit-qa-title span{color:#a6ff00;text-shadow:0 0 38px rgba(166,255,0,.8)}.fit-qa-list{display:grid;grid-template-columns:1fr 1fr;gap:22px;perspective:1200px}.fit-qa-card{background:rgba(5,5,5,.92);border:2px solid rgba(166,255,0,.28);padding:30px;min-height:210px;transform-style:preserve-3d;transition:.4s ease;box-shadow:0 30px 80px rgba(0,0,0,.75)}.fit-qa-card:hover{transform:translateY(-12px) rotateX(7deg) rotateY(-4deg) scale(1.02);border-color:#a6ff00;box-shadow:0 45px 95px rgba(0,0,0,.9),0 0 45px rgba(166,255,0,.25)}.fit-qa-number{color:#a6ff00;font-size:13px;font-weight:900;letter-spacing:3px;margin-bottom:14px}.fit-qa-card h3{margin:0 0 14px;font-size:22px;line-height:1.25;text-transform:uppercase}.fit-qa-line{width:55px;height:3px;background:#a6ff00;margin:16px 0;box-shadow:0 0 20px rgba(166,255,0,.8)}.fit-qa-card p{margin:0;color:rgba(255,255,255,.78);font-size:16px;line-height:1.7}@media(max-width:850px){.fit-qa-list{grid-template-columns:1fr}}
+</style>
+<section class="fit-qa-pro" id="s-apropos"><div class="fit-qa-inner"><div class="fit-qa-head"><div class="fit-qa-kicker">Q&A</div><h2 class="fit-qa-title">Questions &<br><span>answers</span></h2></div><div class="fit-qa-list">
+<div class="fit-qa-card"><div class="fit-qa-number">01</div><h3>Do I need experience to start?</h3><div class="fit-qa-line"></div><p>No. Our programs are built for beginners, intermediate members, and advanced athletes.</p></div><div class="fit-qa-card"><div class="fit-qa-number">02</div><h3>Can I get a personal coach?</h3><div class="fit-qa-line"></div><p>Yes. You can choose coaching support with progress tracking and a custom training plan.</p></div><div class="fit-qa-card"><div class="fit-qa-number">03</div><h3>Do you offer flexible schedules?</h3><div class="fit-qa-line"></div><p>Yes. Our training hours and programs are designed to fit different lifestyles and routines.</p></div><div class="fit-qa-card"><div class="fit-qa-number">04</div><h3>Is nutrition guidance included?</h3><div class="fit-qa-line"></div><p>Nutrition guidance is included in selected plans to help you improve results faster.</p></div><div class="fit-qa-card"><div class="fit-qa-number">05</div><h3>Can I cancel my membership?</h3><div class="fit-qa-line"></div><p>Yes. Membership options are flexible, and cancellation rules depend on the selected plan.</p></div><div class="fit-qa-card"><div class="fit-qa-number">06</div><h3>Do you have group classes?</h3><div class="fit-qa-line"></div><p>Yes. We offer group training sessions for strength, conditioning, cardio, and full-body workouts.</p></div></div></div></section>
+<style>.fit-booking-pro{width:100vw;margin-left:calc(50% - 50vw);position:relative;overflow:hidden;background:#000;color:#fff;padding:120px 5%;font-family:Arial,sans-serif}.fit-booking-pro::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 25%,rgba(166,255,0,.24),transparent 34%),radial-gradient(circle at 85% 75%,rgba(166,255,0,.14),transparent 38%),linear-gradient(180deg,#000,#050505,#000);animation:bookingBg 8s ease-in-out infinite alternate}@keyframes bookingBg{from{transform:scale(1)}to{transform:scale(1.08) translateY(-18px)}}.fit-booking-inner{position:relative;z-index:2;max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.fit-booking-title{font-size:clamp(48px,6vw,86px);line-height:.95;text-transform:uppercase;font-weight:900;margin:0}.fit-booking-title span{color:#a6ff00;text-shadow:0 0 38px rgba(166,255,0,.8)}.fit-booking-text{margin-top:24px;color:rgba(255,255,255,.78);font-size:18px;line-height:1.7}.fit-booking-form{background:rgba(5,5,5,.92);border:2px solid rgba(166,255,0,.28);padding:35px;box-shadow:0 35px 90px rgba(0,0,0,.8);transition:.4s}.fit-booking-form:hover{transform:translateY(-12px) rotateX(5deg);border-color:#a6ff00;box-shadow:0 0 50px rgba(166,255,0,.25)}.fit-booking-form input,.fit-booking-form select,.fit-booking-form textarea{width:100%;margin-bottom:15px;padding:16px;background:#070707;border:1px solid rgba(166,255,0,.28);color:#fff;outline:none}.fit-booking-form button{width:100%;padding:17px;background:#a6ff00;color:#000;border:none;font-weight:900;text-transform:uppercase;cursor:pointer}@media(max-width:900px){.fit-booking-inner{grid-template-columns:1fr}}</style>
+<section class="fit-booking-pro" id="s-inscription"><div class="fit-booking-inner"><div><h2 class="fit-booking-title">Book your<br><span>free session</span></h2><p class="fit-booking-text">Ready to start your transformation? Send your information and our team will contact you to plan your first training session.</p></div><form class="fit-booking-form" onsubmit="event.preventDefault(); window.open('https://wa.me/212617499697?text='+encodeURIComponent('Hello, I want to request a free gym session. Name: '+this.querySelector('input[type=text]').value+' Phone: '+this.querySelector('input[type=tel]').value),'_blank')"><input type="text" placeholder="Full Name"><input type="tel" placeholder="Phone Number"><select><option>Choose your goal</option><option>Lose Weight</option><option>Build Muscle</option><option>Improve Fitness</option><option>Personal Coaching</option></select><textarea rows="4" placeholder="Your message"></textarea><button type="submit">Request booking</button></form></div></section>
+
+<style>.fit-footer-pro{width:100vw;margin-left:calc(50% - 50vw);background:#000;color:#fff;position:relative;overflow:hidden;padding:100px 5% 50px;font-family:Arial,sans-serif}.fit-footer-pro::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(166,255,0,.2),transparent 35%),radial-gradient(circle at 70% 70%,rgba(166,255,0,.15),transparent 40%);animation:footerBg 7s ease-in-out infinite alternate}@keyframes footerBg{from{transform:scale(1)}to{transform:scale(1.08)}}.fit-footer-inner{position:relative;z-index:2;max-width:1300px;margin:auto}.fit-footer-cta{text-align:center;margin-bottom:80px}.fit-footer-cta h2{font-size:clamp(48px,6vw,80px);font-weight:900;text-transform:uppercase}.fit-footer-cta span{color:#a6ff00;text-shadow:0 0 40px rgba(166,255,0,1)}.fit-footer-cta p{margin-top:20px;color:#ccc;font-size:18px}.fit-footer-btn{margin-top:30px;display:inline-block;padding:18px 40px;background:#a6ff00;color:#000;font-weight:900;text-transform:uppercase;text-decoration:none;transition:.3s}.fit-footer-btn:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(166,255,0,.4)}.fit-footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;border-top:1px solid rgba(166,255,0,.2);padding-top:50px}.fit-footer-col h3{color:#a6ff00;margin-bottom:20px;font-size:18px}.fit-footer-col a{display:block;margin-bottom:10px;color:#ccc;text-decoration:none;transition:.2s}.fit-footer-col a:hover{color:#a6ff00}.fit-footer-bottom{text-align:center;margin-top:60px;color:#888;font-size:14px}@media(max-width:900px){.fit-footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.fit-footer-grid{grid-template-columns:1fr}}</style>
+<section class="fit-footer-pro" id="s-contact"><div class="fit-footer-inner"><div class="fit-footer-cta"><h2>Start your <span>transformation</span><br>today</h2><p>Join now and take the first step toward a stronger, better version of yourself.</p><a href="#s-inscription" class="fit-footer-btn">Join now</a></div><div class="fit-footer-grid"><div class="fit-footer-col"><h3>Gym</h3><a href="#s-apropos">About us</a><a href="#s-coachs">Coaches</a><a href="#s-services">Programs</a></div><div class="fit-footer-col"><h3>Services</h3><a href="#s-services">Personal training</a><a href="#s-services">Group classes</a><a href="#s-services">Nutrition</a></div><div class="fit-footer-col"><h3>Support</h3><a href="#s-contact">Contact</a><a href="#s-apropos">FAQ</a><a href="#s-inscription">Help</a></div><div class="fit-footer-col"><h3>Follow us</h3><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div></div><div class="fit-footer-bottom">© 2026 FitZone. All rights reserved.</div></div></section>
+
+<style>#gymx-wa-btn{position:fixed!important;right:30px!important;bottom:110px!important;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;z-index:2147483647!important;box-shadow:0 0 0 6px rgba(37,211,102,.16),0 10px 35px rgba(37,211,102,.55);animation:gymxWaFloat 3s ease-in-out infinite;text-decoration:none}#gymx-wa-btn:hover{transform:scale(1.12);animation:none}@keyframes gymxWaFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}#gymx-wa-ring{position:fixed!important;right:30px!important;bottom:110px!important;width:58px;height:58px;border-radius:50%;border:2px solid rgba(37,211,102,.5);z-index:2147483646!important;animation:gymxWaRing 2s ease-out infinite;pointer-events:none}@keyframes gymxWaRing{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.8);opacity:0}}@media(max-width:520px){#gymx-wa-btn,#gymx-wa-ring{right:24px!important;bottom:100px!important}}</style><div id="gymx-wa-ring"></div><a id="gymx-wa-btn" href="https://wa.me/212617499697?text=Hello%20I%20want%20more%20information" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg></a>
+
+<style>#gymx-ai-root,#gymx-ai-root *{box-sizing:border-box;font-family:Arial,sans-serif}#gymx-ai-root{position:fixed!important;right:22px!important;bottom:22px!important;z-index:2147483647!important}#gymx-ai-btn{width:74px;height:74px;border-radius:50%;border:0;cursor:pointer;background:#b7ff00;box-shadow:0 0 0 7px rgba(183,255,0,.18),0 0 45px rgba(183,255,0,.65);display:flex;align-items:center;justify-content:center;animation:gymxEnter .8s ease forwards,gymxFloat 3s ease-in-out infinite}@keyframes gymxEnter{from{opacity:0;transform:scale(.2) rotate(-180deg)}to{opacity:1;transform:scale(1) rotate(0)}}@keyframes gymxFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}#gymx-ai-btn svg{width:42px;height:42px}#gymx-ai-notifs{position:fixed!important;right:105px!important;bottom:34px!important;z-index:2147483646!important;display:flex;flex-direction:column;gap:10px;pointer-events:none}.gymx-notif{min-width:230px;background:rgba(8,8,8,.95);border:1px solid rgba(183,255,0,.35);border-radius:18px 18px 4px 18px;padding:12px 14px;color:#fff;box-shadow:0 0 35px rgba(183,255,0,.16);opacity:0;transform:translateX(20px) scale(.95);transition:.45s cubic-bezier(.34,1.56,.64,1)}.gymx-notif.show{opacity:1;transform:translateX(0) scale(1)}.gymx-notif small{color:#b7ff00;font-size:10px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}.gymx-notif strong{display:block;font-size:14px;margin-top:4px}.gymx-notif span{display:block;color:rgba(255,255,255,.65);font-size:12px;margin-top:3px}#gymx-ai-panel{position:fixed!important;right:22px!important;bottom:110px!important;width:420px;max-width:calc(100vw - 24px);height:640px;max-height:calc(100vh - 135px);background:#050505;color:#fff;border:1px solid rgba(183,255,0,.35);border-radius:26px;overflow:hidden;display:none;flex-direction:column;z-index:2147483646!important;box-shadow:0 30px 100px rgba(0,0,0,.9),0 0 55px rgba(183,255,0,.18)}#gymx-ai-panel.open{display:flex;animation:gymxPanel .35s ease forwards}@keyframes gymxPanel{from{opacity:0;transform:translateY(30px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}.gymx-head{padding:17px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#070707,#101900);border-bottom:1px solid rgba(183,255,0,.18)}.gymx-brand{display:flex;align-items:center;gap:13px}.gymx-avatar,.gymx-mini{border-radius:50%;background:#b7ff00;display:flex;align-items:center;justify-content:center}.gymx-avatar{width:58px;height:58px;box-shadow:0 0 30px rgba(183,255,0,.65)}.gymx-title{font-size:17px;font-weight:900;text-transform:uppercase}.gymx-sub{margin-top:4px;font-size:13px;color:rgba(255,255,255,.55)}.gymx-sub b{color:#b7ff00}.gymx-close{width:40px;height:40px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:white;cursor:pointer;font-size:24px}#gymx-ai-msgs{flex:1;overflow-y:auto;overflow-x:hidden;padding:18px;background:radial-gradient(circle at 80% 10%,rgba(183,255,0,.1),transparent 35%),#050505;display:flex;flex-direction:column;gap:14px}.gymx-row{display:flex;gap:10px}.gymx-row.user{justify-content:flex-end}.gymx-mini{width:34px;height:34px;min-width:34px}.gymx-bubble{max-width:78%;padding:13px 16px;border-radius:18px;font-size:14px;line-height:1.6}.gymx-row.bot .gymx-bubble{background:#171717;border:1px solid rgba(183,255,0,.14);border-top-left-radius:4px}.gymx-row.user .gymx-bubble{background:#b7ff00;color:#050505;font-weight:800;border-top-right-radius:4px}.gymx-chips{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;padding:13px;background:#0b0b0b;border-top:1px solid rgba(255,255,255,.07)}.gymx-chip{min-height:52px;border-radius:14px;border:1px solid rgba(183,255,0,.28);background:rgba(183,255,0,.06);color:#fff;cursor:pointer;font-size:13px}.gymx-input{padding:14px;background:#0b0b0b;display:flex;gap:10px;border-top:1px solid rgba(255,255,255,.07)}#gymx-ai-text{flex:1;background:#171717;border:1px solid rgba(255,255,255,.1);color:#fff;border-radius:26px;padding:13px 16px;outline:none;font-size:14px}#gymx-ai-send{width:48px;height:48px;border-radius:50%;border:0;background:#b7ff00;color:#050505;font-weight:900;cursor:pointer;font-size:19px}.gymx-powered{text-align:center;background:#0b0b0b;color:rgba(255,255,255,.25);padding:9px;font-size:10px;letter-spacing:3px;text-transform:uppercase}@media(max-width:520px){#gymx-ai-root{right:16px!important;bottom:16px!important}#gymx-ai-panel{right:10px!important;bottom:100px!important;width:calc(100vw - 20px)}#gymx-ai-notifs{right:92px!important;bottom:28px!important}.gymx-notif{min-width:210px}}</style><div id="gymx-ai-root"><button id="gymx-ai-btn" onclick="gymxToggle()" aria-label="Open AI Assistant"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" fill="#b7ff00"/><path d="M39 5L15 36H29L23 59L50 25H36L39 5Z" fill="#050505"/></svg></button></div><div id="gymx-ai-notifs"><div class="gymx-notif" id="gymx-n1"><small>New Message</small><strong>FitZone AI Coach</strong><span>Need help with your fitness goal?</span></div><div class="gymx-notif" id="gymx-n2"><small>Nouveau Message</small><strong>Coach IA FitZone</strong><span>Besoin d’aide pour votre objectif ?</span></div></div><div id="gymx-ai-panel"><div class="gymx-head"><div class="gymx-brand"><div class="gymx-avatar"><svg width="34" height="34" viewBox="0 0 64 64" fill="none"><path d="M39 5L15 36H29L23 59L50 25H36L39 5Z" fill="#050505"/></svg></div><div><div class="gymx-title">FitZone AI Coach</div><div class="gymx-sub">Online <b>•</b> Fitness Assistant</div></div></div><button class="gymx-close" onclick="gymxToggle()">×</button></div><div id="gymx-ai-msgs"><div class="gymx-row bot"><div class="gymx-mini"><svg width="20" height="20" viewBox="0 0 64 64" fill="none"><path d="M39 5L15 36H29L23 59L50 25H36L39 5Z" fill="#050505"/></svg></div><div class="gymx-bubble">Hi 👋<br>I’m your AI fitness coach.<br>Ask me about training, nutrition, prices, or booking a session.</div></div></div><div class="gymx-chips"><button class="gymx-chip" onclick="gymxQuick('I want to lose weight')">🔥 Lose weight</button><button class="gymx-chip" onclick="gymxQuick('I want to gain muscle')">💪 Gain muscle</button><button class="gymx-chip" onclick="gymxQuick('What are your prices?')">🏷️ Prices</button><button class="gymx-chip" onclick="gymxQuick('I want to book a session')">📅 Book session</button></div><div class="gymx-input"><input id="gymx-ai-text" placeholder="Type your message..." onkeydown="if(event.key==='Enter')gymxSend()"><button id="gymx-ai-send" onclick="gymxSend()">➤</button></div><div class="gymx-powered">Powered by FitZone AI</div></div><script>(function(){const WEBHOOK="https://issammalihq.app.n8n.cloud/webhook/f8facc6a-22ba-4d7c-b0e1-ddc767a336ab/chat";const sessionId="gymx_"+Date.now()+"_"+Math.random().toString(36).slice(2);window.gymxToggle=function(){document.getElementById("gymx-ai-panel").classList.toggle("open")};function showNotif(id,delay,hide){setTimeout(function(){const panel=document.getElementById("gymx-ai-panel");if(panel.classList.contains("open"))return;const n=document.getElementById(id);if(n)n.classList.add("show")},delay);setTimeout(function(){const n=document.getElementById(id);if(n)n.classList.remove("show")},hide)}showNotif("gymx-n1",1500,5500);showNotif("gymx-n2",6500,10500);window.gymxQuick=function(text){document.getElementById("gymx-ai-text").value=text;gymxSend()};function addMessage(text,type){const box=document.getElementById("gymx-ai-msgs");const row=document.createElement("div");row.className="gymx-row "+type;if(type==="bot"){const mini=document.createElement("div");mini.className="gymx-mini";mini.innerHTML='<svg width="20" height="20" viewBox="0 0 64 64" fill="none"><path d="M39 5L15 36H29L23 59L50 25H36L39 5Z" fill="#050505"/></svg>';row.appendChild(mini)}const bubble=document.createElement("div");bubble.className="gymx-bubble";bubble.innerHTML=String(text).replace(/\n/g,"<br>");row.appendChild(bubble);box.appendChild(row);box.scrollTop=box.scrollHeight;return row}window.gymxSend=function(){const input=document.getElementById("gymx-ai-text");const text=input.value.trim();if(!text)return;addMessage(text,"user");input.value="";const typing=addMessage("Typing...","bot");fetch(WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({sessionId:sessionId,chatInput:text,action:"sendMessage"})}).then(r=>r.json()).then(data=>{typing.remove();addMessage(data.output||data.text||data.message||"I can help you choose the best fitness plan. What is your goal?","bot")}).catch(()=>{typing.remove();addMessage("Connection problem. Please try again, or contact us for faster help.","bot")})}})();</script>
+</body></html>
